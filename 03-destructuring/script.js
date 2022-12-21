@@ -1,6 +1,15 @@
 function handleMouseMove({ clientX, clientY }) {
-  console.log(clientX, clientY);
+  const bolinhaColoridaElement = document.querySelector(".ponto-colorido");
+
+  let posX = clientX - 50;
+  let posY = clientY - 50;
+  
+  bolinhaColoridaElement.style.left = posX + "px";
+  bolinhaColoridaElement.style.top = posY + "px";
+
 }
+
+document.documentElement.addEventListener("mousemove", handleMouseMove);
 
 const frutas = ["Banana", "Uva"];
 
@@ -15,4 +24,3 @@ const useState = [
 
 const [color, setColor] = useState;
 
-// document.documentElement.addEventListener("mousemove", handleMouseMove);
